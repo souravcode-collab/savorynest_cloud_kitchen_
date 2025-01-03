@@ -1,82 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-   
-    <head>
-        <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>SavoryNest</title>
-        <link
-          rel="shortcut icon"
-          href="https://png.pngtree.com/png-clipart/20220903/ourmid/pngtree-chef-restaurant-logo-png-image_6136204.png"
-          type="image/x-icon"
-        />
-        <link rel="stylesheet" href="style.css" />
-        <link
-          rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-        />
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-      </head>
-<body>
-
+    <title>SavoryNest</title>
+    <link
+      rel="shortcut icon"
+      href="https://png.pngtree.com/png-clipart/20220903/ourmid/pngtree-chef-restaurant-logo-png-image_6136204.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
-        body{
-            background-color: black;
+      body {
+        background-color: #f8f9fa; /* Lighter background color */
+        font-family: 'Arial', sans-serif;
+        color: #333;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+
+      h2 {
+        color: #f15a29; /* Rich orange color */
+        font-size: 36px;
+        font-weight: bold;
+        margin-bottom: 40px;
+      }
+
+      .card {
+        border: none;
+        border-radius: 12px;
+        background-color: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+        transition: transform 0.3s, box-shadow 0.3s;
+        margin-bottom: 30px;
+      }
+
+      .card:hover {
+        transform: translateY(-8px); /* Slight lift on hover */
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+      }
+
+      .card-body {
+        padding: 30px;
+        text-align: center;
+      }
+
+      .card-body img {
+        border-radius: 50%;
+        background-color: #fff;
+        padding: 15px;
+        margin-bottom: 20px;
+        width: 100px; /* Slightly larger icons */
+        height: 100px;
+      }
+
+      .card-title {
+        color: #f15a29; /* Orange title */
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .card-text {
+        font-size: 16px;
+        color: #555; /* Dark grey text */
+        margin-top: 10px;
+      }
+
+      .row {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 768px) {
+        .col-md-4 {
+          width: 100%; /* Full width for mobile */
+          margin-bottom: 20px;
         }
-        .card {
-    border: none;
-    border-radius: 10px;
-    background-color: whitesmoke;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
+      }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-.card-body img {
-    border-radius: 50%;
-    background-color: white;
-    padding: 10px;
-}
-
+      .footer {
+        background-color: #f15a29; /* Matching footer color */
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+      }
     </style>
-    <div class="container" id="about-us" style="margin-top: 50px; margin-bottom: 50px;">
-        <h2 class="text-center" style="color: orangered; margin-bottom: 30px;">About Us</h2>
-        <div class="row">
-            <!-- Fast Delivery Card -->
-            <div class="col-md-4">
-                <div class="card text-center" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                    <div class="card-body">
-                        <img src="https://cdn-icons-png.flaticon.com/512/1048/1048312.png" alt="Fast Delivery" style="width: 80px; margin-bottom: 15px;">
-                        <h4 class="card-title" style="color: orangered;">Fast Delivery</h4>
-                        <p class="card-text">Enjoy lightning-fast delivery of your favorite dishes right at your doorstep.</p>
-                    </div>
-                </div>
+  </head>
+
+  <body>
+
+    <div class="container" id="about-us">
+      <h2 class="text-center">About Us</h2>
+      <div class="row">
+        <!-- Fast Delivery Card -->
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <img src="https://cdn-icons-png.flaticon.com/512/1048/1048312.png" alt="Fast Delivery">
+              <h4 class="card-title">Fast Delivery</h4>
+              <p class="card-text">Enjoy lightning-fast delivery of your favorite dishes right at your doorstep.</p>
             </div>
-            <!-- 24/7 Open Card -->
-            <div class="col-md-4">
-                <div class="card text-center" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                    <div class="card-body">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3602/3602123.png" alt="24/7 Open" style="width: 80px; margin-bottom: 15px;">
-                        <h4 class="card-title" style="color: orangered;">24/7 Open</h4>
-                        <p class="card-text">We are always open, ensuring you can enjoy delicious meals anytime.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Cash on Delivery Card -->
-            <div class="col-md-4">
-                <div class="card text-center" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-                    <div class="card-body">
-                        <img src="https://cdn-icons-png.flaticon.com/512/869/869428.png" alt="Cash on Delivery" style="width: 80px; margin-bottom: 15px;">
-                        <h4 class="card-title" style="color: orangered;">Cash on Delivery</h4>
-                        <p class="card-text">Pay conveniently with cash on delivery for all your orders.</p>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <!-- 24/7 Open Card -->
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <img src="https://cdn-icons-png.flaticon.com/512/3602/3602123.png" alt="24/7 Open">
+              <h4 class="card-title">24/7 Open</h4>
+              <p class="card-text">We are always open, ensuring you can enjoy delicious meals anytime.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Cash on Delivery Card -->
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <img src="https://cdn-icons-png.flaticon.com/512/869/869428.png" alt="Cash on Delivery">
+              <h4 class="card-title">Cash on Delivery</h4>
+              <p class="card-text">Pay conveniently with cash on delivery for all your orders.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
     
-</body>
+    <div class="footer">
+      <p>© 2025 SavoryNest | All Rights Reserved</p>
+    </div>
+
+  </body>
 </html>
