@@ -1,292 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SavoryNest</title>
     <link
       rel="shortcut icon"
       href="https://png.pngtree.com/png-clipart/20220903/ourmid/pngtree-chef-restaurant-logo-png-image_6136204.png"
       type="image/x-icon"
     />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
       body {
-        background-color: black;
-        color: red;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: #f5f5f5;
+        color: #333;
+        font-family: 'Arial', sans-serif;
       }
 
       .navbar-inverse {
-        background-color: black;
-        border-color: black;
+        background-color: #333;
+        border-color: #333;
       }
 
-      .navbar-inverse .navbar-brand {
-        color: orangered;
-      }
-
+      .navbar-inverse .navbar-brand,
       .navbar-inverse .nav > li > a {
-        color: orangered;
+        color: #f15a29;
+      }
+
+      .menu-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 30px;
+        margin: 40px 0;
       }
 
       .menu-card {
-        margin: 20px auto;
-        max-width: 800px;
-        background-color: whitesmoke;
-        border-radius: 8px;
+        background-color: #fff;
+        border-radius: 12px;
         padding: 20px;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      }
-
-      .menu-card h3 {
-        color: red;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        width: 250px;
         text-align: center;
-        margin-bottom: 20px;
+        transition: transform 0.3s;
       }
 
-      .menu-card ul {
-        list-style: none;
-        padding: 0;
-      }
-
-      .menu-card ul li {
-        padding: 10px;
-        border-bottom: 1px solid black;
-      }
-
-      .menu-card ul li:last-child {
-        border-bottom: none;
+      .menu-card:hover {
+        transform: scale(1.05);
       }
 
       .menu-card img {
-        display: block;
-        margin: 0 auto 20px;
+        width: 100px;
+        height: 100px;
         border-radius: 50%;
+        margin-bottom: 15px;
       }
 
-      .menu-card ul li span {
+      .menu-card h4 {
+        color: #f15a29;
+        font-size: 22px;
+        margin-bottom: 10px;
+      }
+
+      .menu-card p {
+        font-size: 18px;
+        margin-bottom: 15px;
+        color: #333;
+      }
+
+      .menu-card .price {
+        font-size: 20px;
+        color: #f15a29;
         font-weight: bold;
-        color: orangered;
       }
-    </style>
-  </head>
-  <body>
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-toggle="collapse"
-            data-target="#myNavbar"
-          >
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">SavoryNest</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Home</a></li>
 
-            <li><a href="about.html">About Us</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+      .order-form {
+        background-color: #fff;
+        padding: 25px;
+        margin: 40px auto;
+        border-radius: 12px;
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+      }
 
-    <div class="menu-card">
-      <h3>Menu Card</h3>
-      <img
-        src="https://png.pngtree.com/png-clipart/20220903/ourmid/pngtree-chef-restaurant-logo-png-image_6136204.png"
-        alt="SavoryNest Logo"
-        width="100"
-      />
-      <ul>
-        <li>
-          <span>Chicken Thali</span> (1 bowl rice + 2 pcs chicken + dal + aloo
-          bhaja) - ₹100/-
-        </li>
-        <li>
-          <span>Mutton Thali</span> (1 bowl rice + 2 pcs mutton + dal + aloo
-          bhaja) - ₹250/-
-        </li>
-        <li>
-          <span>Fish Thali</span> (1 bowl rice + 1 fish curry + dal + aloo
-          bharta) - ₹120/-
-        </li>
-        <li>
-          <span>Veg Thali</span> (1 bowl rice + dal + mixed veg curry + aloo
-          bhaja) - ₹80/-
-        </li>
-        <li>
-          <span>Egg Thali</span> (1 bowl rice + 2 eggs curry + dal + aloo
-          bharta) - ₹90/-
-        </li>
-        <li>
-          <span>Prawn Thali</span> (1 bowl rice + prawn curry + dal + aloo
-          bharta) - ₹180/-
-        </li>
-        <li>
-          <span>Paneer Thali</span> (1 bowl rice + paneer curry + dal + aloo
-          bharta) - ₹150/-
-        </li>
-        <li>
-          <span>Mushroom Thali</span> (1 bowl rice + mushroom masala + dal +
-          aloo bhaja) - ₹140/-
-        </li>
-        <li>
-          <span>Chingri Malai Curry Thali</span> (1 bowl rice + prawn malai
-          curry + dal + aloo bharta) - ₹220/-
-        </li>
-        <li>
-          <span>Crab Curry Thali</span> (1 bowl rice + crab curry + dal + aloo
-          bhaja) - ₹270/-
-        </li>
-        <li>
-          <span>Special Veg Thali</span> (1 bowl rice + dal + shahi paneer +
-          mixed veg + aloo bharta) - ₹180/-
-        </li>
-        <li>
-          <span>Special Non-Veg Thali</span> (1 bowl rice + 1 chicken curry + 1
-          mutton curry + dal + aloo bhaja) - ₹300/-
-        </li>
-        <li>
-          <span>Chicken Biryani</span> (Basmati rice + chicken pieces + boiled
-          egg + raita) - ₹180/-
-        </li>
-        <li>
-          <span>Mutton Biryani</span> (Basmati rice + mutton pieces + boiled egg
-          + raita) - ₹250/-
-        </li>
-        <li>
-          <span>Veg Biryani</span> (Basmati rice + mixed vegetables + paneer +
-          raita) - ₹150/-
-        </li>
-        <li>
-          <span>Egg Biryani</span> (Basmati rice + boiled eggs + raita) - ₹120/-
-        </li>
-        <li>
-          <span>Prawn Biryani</span> (Basmati rice + prawn curry + raita) -
-          ₹220/-
-        </li>
-      </ul>
-    </div>
+      .order-form h3 {
+        color: #f15a29;
+        font-size: 28px;
+        text-align: center;
+        margin-bottom: 25px;
+      }
 
-    <div class="order-form container">
-      <h3>Place Your Order</h3>
-      <form>
-        <div class="form-group">
-          <label for="menu">Menu</label>
-          <input
-            type="text"
-            id="menu"
-            class="form-control"
-            placeholder="Enter food item"
-            list="menu-suggestions"
-          />
-          <datalist id="menu-suggestions">
-            <option value="Chicken Thali"></option>
-            <option value="Mutton Thali"></option>
-            <option value="Fish Thali"></option>
-            <option value="Veg Thali"></option>
-            <option value="Egg Thali"></option>
-            <option value="Prawn Thali"></option>
-            <option value="Paneer Thali"></option>
-            <option value="Mushroom Thali"></option>
-            <option value="Chingri Malai Curry Thali"></option>
-            <option value="Crab Curry Thali"></option>
-            <option value="Special Veg Thali"></option>
-            <option value="Special Non-Veg Thali"></option>
-            <option value="Chicken Biryani"></option>
-            <option value="Mutton Biryani"></option>
-            <option value="Veg Biryani"></option>
-            <option value="Egg Biryani"></option>
-            <option value="Prawn Biryani"></option>
-          </datalist>
-        </div>
+      .form-group label {
+        font-size: 16px;
+      }
 
-        <div class="form-group">
-          <label for="quantity">Quantity</label>
-          <input
-            type="number"
-            id="quantity"
-            class="form-control"
-            placeholder="Enter quantity"
-            min="1"
-          />
-        </div>
-        <div class="form-group">
-          <label for="payment">Payment Method</label>
-          <select
-            id="payment"
-            class="form-control"
-            onchange="toggleUPIFields()"
-          >
-            <option value="cash">Cash on Delivery</option>
-            <option value="upi">UPI</option>
-          </select>
-        </div>
-        <div class="form-group" id="upi-fields" style="display: none">
-          <label for="upi-id">UPI ID</label>
-          <input
-            type="text"
-            id="upi-id"
-            class="form-control"
-            placeholder="Enter UPI ID"
-          />
-          <label for="bank">Bank</label>
-          <input
-            type="text"
-            id="bank"
-            class="form-control"
-            placeholder="Enter bank name"
-            list="bank-suggestions"
-          />
-          <datalist id="bank-suggestions">
-            <option value="State Bank of India (SBI)"></option>
-            <option value="HDFC Bank"></option>
-            <option value="ICICI Bank"></option>
-            <option value="Punjab National Bank (PNB)"></option>
-            <option value="Axis Bank"></option>
-            <option value="Kotak Mahindra Bank"></option>
-            <option value="Bank of Baroda"></option>
-            <option value="Canara Bank"></option>
-            <option value="Union Bank of India"></option>
-            <option value="IDFC First Bank"></option>
-          </datalist>
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">
-          Confirm Order
-        </button>
-      </form>
-    </div>
-    <script>
-      function toggleUPIFields() {
-        const paymentMethod = document.getElementById("payment").value;
-        const upiFields = document.getElementById("upi-fields");
-        if (paymentMethod === "upi") {
-          upiFields.style.display = "block";
-        } else {
-          upiFields.style.display = "none";
+      .form-control {
+        font-size: 16px;
+        padding: 12px;
+        border-radius: 8px;
+      }
+
+      .btn-primary {
+        background-color: #f15a29;
+        border-color: #f15a29;
+        font-size: 18px;
+        padding: 12px 20px;
+        border-radius: 8px;
+        width: 100%;
+      }
+
+      .btn-primary:hover {
+        background-color: #e14f23;
+        border-color: #e14f23;
+      }
+
+      .footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+      }
+
+      @media (max-width: 768px) {
+        .menu-card-container {
+          justify-content: center;
+        }
+        .menu-card {
+          width: 200px;
         }
       }
-    </script>
+     
+#payment {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="menu-card-container">
+        <div class="menu-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNgWb8BAL--fVrWVmuh_fBBJNr2nJlw6TO-Q&s" alt="Chicken Thali">
+          <h4>Chicken Thali</h4>
+          <p>1 bowl rice + 2 pcs chicken + dal + aloo bhaja</p>
+          <div class="price">₹100/-</div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://dailyfood.weddingbellcaterer.com/wp-content/uploads/2021/07/Mutton-Thali-Home-Delivery-Kolkata.png" alt="Mutton Thali">
+          <h4>Mutton Thali</h4>
+          <p>1 bowl rice + 2 pcs mutton + dal + aloo bhaja</p>
+          <div class="price">₹250/-</div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://dailyfood.weddingbellcaterer.com/wp-content/uploads/2021/07/Fish-Thali-Home-Delivery-In-Kolkata.png" alt="Fish Thali">
+          <h4>Fish Thali</h4>
+          <p>1 bowl rice + 1 fish curry + dal + aloo bharta</p>
+          <div class="price">₹120/-</div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://eastindianrecipes.net/wp-content/uploads/2022/09/How-to-Make-North-Indian-Thali-Vegetarian-7.jpg" alt="Veg Thali">
+          <h4>Veg Thali</h4>
+          <p>1 bowl rice + dal + mixed veg curry + aloo bhaja</p>
+          <div class="price">₹80/-</div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX1mOgA4CVS2sCQVTaGCDV2V68CdAP7sM1RQ&s" alt="Egg Thali">
+          <h4>Egg Thali</h4>
+          <p>1 bowl rice + 2 eggs curry + dal + aloo bharta</p>
+          <div class="price">₹90/-</div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNSmEN9LnfeDUSuBjm_OT-meVukx-bX9Cd8w&s" alt="Prawn Thali">
+          <h4>Prawn Thali</h4>
+          <p>1 bowl rice + prawn curry + dal + aloo bharta</p>
+          <div class="price">₹180/-</div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://www.enhanceyourpalate.com/wp-content/uploads/2018/09/IMG_0336-905x1024.jpeg" alt="Paneer Thali">
+          <h4>Paneer Thali</h4>
+          <p>1 bowl rice + paneer curry + dal + aloo bharta</p>
+          <div class="price">₹150/-</div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGy8hckZrMAKyXWpsEZWOWnsKsJCc-FIXtFA&s" alt="Mushroom Thali">
+          <h4>Mushroom Thali</h4>
+          <p>1 bowl rice + mushroom masala + dal + aloo bhaja</p>
+          <div class="price">₹140/-</div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr8a-VmQcshwLy8sRZXw8vhl_rPvol9RmsPw&s" alt="Chingri Malai Curry Thali">
+          <h4>Chingri Malai Curry Thali</h4>
+          <p>1 bowl rice + prawn malai curry + dal + aloo bharta</p>
+          <div class="price">₹220/-</div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEf_Io_WJGLHapX0MBzXXguOqJSbi3oMyd6w&s" alt="Crab Curry Thali">
+          <h4>Crab Curry Thali</h4>
+          <p>1 bowl rice + crab curry + dal + aloo bhaja</p>
+          <div class="price">₹270/-</div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://5.imimg.com/data5/TV/MU/GLADMIN-48019022/bengali-special-veg-thali-500x500.jpg" alt="Special Veg Thali">
+          <h4>Special Veg Thali</h4>
+          <p>1 bowl rice + dal + shahi paneer + mixed veg + aloo bharta</p>
+          <div class="price">₹180/-</div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://b.zmtcdn.com/data/dish_photos/4e2/2bb7e517ceeda26822d6325a1c18f4e2.jpg" alt="Special Non-Veg Thali">
+          <h4>Special Non-Veg Thali</h4>
+          <p>1 bowl rice + 1 chicken curry + 1 mutton curry + dal + aloo bhaja</p>
+          <div class="price">₹300/-</div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://www.licious.in/blog/wp-content/uploads/2022/06/chicken-hyderabadi-biryani-01-750x750.jpg" alt="Chicken Biryani">
+          <h4>Chicken Biryani</h4>
+          <p>Basmati rice + chicken pieces + boiled egg + raita</p>
+          <div class="price">₹180/-</div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://www.licious.in/blog/wp-content/uploads/2022/06/mutton-hyderabadi-biryani-01.jpg" alt="Mutton Biryani">
+          <h4>Mutton Biryani</h4>
+          <p>Basmati rice + mutton pieces + boiled egg + raita</p>
+          <div class="price">₹250/-</div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3HHw5Q-fZv52oTxWacSNfFFnxwhHfweb6TQ&s" alt="Veg Biryani">
+          <h4>Veg Biryani</h4>
+          <p>Basmati rice + mixed vegetables + paneer + raita</p>
+          <div class="price">₹150/-</div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3HDBFnrzC-XuYIAaRsmxg4kkAszYlr-R5sA&s" alt="Egg Biryani">
+          <h4>Egg Biryani</h4>
+          <p>Basmati rice + boiled eggs + raita</p>
+          <div class="price">₹120/-</div>
+        </div>
+
+        <div class="menu-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmF8iuOyVzHsQqXDxtSZFll-brwMFXtPvn8w&s" alt="Prawn Biryani">
+          <h4>Prawn Biryani</h4>
+          <p>Basmati rice + prawn curry + raita</p>
+          <div class="price">₹220/-</div>
+        </div>
+      </div>
+
+      <div class="order-form">
+        <h3>Place Your Order</h3>
+        <form>
+          <div class="form-group">
+            <label for="menu">Menu</label>
+            <input type="text" id="menu" class="form-control" placeholder="Enter food item" list="menu-suggestions">
+            <datalist id="menu-suggestions">
+              <option value="Chicken Thali">
+              <option value="Mutton Thali">
+              <option value="Fish Thali">
+              <option value="Veg Thali">
+              <option value="Egg Thali">
+              <option value="Prawn Thali">
+              <option value="Paneer Thali">
+              <option value="Mushroom Thali">
+              <option value="Chingri Malai Curry Thali">
+              <option value="Crab Curry Thali">
+              <option value="Special Veg Thali">
+              <option value="Special Non-Veg Thali">
+              <option value="Chicken Biryani">
+              <option value="Mutton Biryani">
+              <option value="Veg Biryani">
+              <option value="Egg Biryani">
+              <option value="Prawn Biryani">
+            </datalist>
+          </div>
+
+          <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" id="quantity" class="form-control" placeholder="Enter quantity" min="1">
+          </div>
+
+          <div class="form-group">
+            <label for="payment">Payment Method</label>
+            <select id="payment" class="form-control" onchange="toggleUPIFields()">
+              <option value="cash">Cash on Delivery</option>
+              <option value="upi">UPI</option>
+            </select>
+          </div>
+          
+          
+
+          <div class="form-group" id="upi-fields" style="display: none;">
+            <label for="upi-id">UPI ID</label>
+            <input type="text" id="upi-id" class="form-control" placeholder="Enter UPI ID">
+            <label for="bank">Bank</label>
+            <input type="text" id="bank" class="form-control" placeholder="Enter bank name" list="bank-suggestions">
+            <datalist id="bank-suggestions">
+              <option value="State Bank of India (SBI)">
+              <option value="HDFC Bank">
+              <option value="ICICI Bank">
+              <option value="Punjab National Bank (PNB)">
+              <option value="Axis Bank">
+              <option value="Kotak Mahindra Bank">
+              <option value="Bank of Baroda">
+              <option value="Canara Bank">
+              <option value="Union Bank of India">
+              <option value="IDFC First Bank">
+            </datalist>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Confirm Order</button>
+        </form>
+      </div>
+    </div>
+
+   
     <script>
       function toggleUPIFields() {
-        const paymentMethod = document.getElementById("payment").value;
-        const upiFields = document.getElementById("upi-fields");
-        if (paymentMethod === "upi") {
-          upiFields.style.display = "block";
+        const paymentMethod = document.getElementById('payment').value;
+        const upiFields = document.getElementById('upi-fields');
+        if (paymentMethod === 'upi') {
+          upiFields.style.display = 'block';
         } else {
-          upiFields.style.display = "none";
+          upiFields.style.display = 'none';
         }
       }
 
@@ -310,23 +366,19 @@
         "Prawn Biryani": 220,
       };
 
-      document
-        .querySelector("form")
-        .addEventListener("submit", function (event) {
-          event.preventDefault();
+      document.querySelector('form').addEventListener('submit', function (event) {
+        event.preventDefault(); 
 
-          const menuItem = document.getElementById("menu").value;
-          const quantity = parseInt(document.getElementById("quantity").value);
+        const menuItem = document.getElementById('menu').value;
+        const quantity = parseInt(document.getElementById('quantity').value);
 
-          if (priceList[menuItem] && quantity > 0) {
-            const totalBill = priceList[menuItem] * quantity;
-            alert(
-              `Congratulations! Your order is confirmed. Total bill: ₹${totalBill}/-`
-            );
-          } else {
-            alert("Please select a valid menu item and quantity.");
-          }
-        });
+        if (priceList[menuItem] && quantity > 0) {
+          const totalBill = priceList[menuItem] * quantity;
+          alert(`Congratulations! Your order is confirmed. Total bill: ₹${totalBill}/-`);
+        } else {
+          alert('Please select a valid menu item and quantity.');
+        }
+      });
     </script>
   </body>
 </html>
