@@ -2,15 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SavoryNest</title>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
       body {
@@ -21,11 +19,33 @@
 
       .hero-section {
         position: relative;
-        background-image: url('https://static.vecteezy.com/system/resources/thumbnails/049/655/073/small_2x/a-plate-full-of-different-types-of-food-png.png');
+        background-image: url("https://res.cloudinary.com/simplotel/image/upload/w_5000,h_3333/x_0,y_387,w_5000,h_2813,r_0,c_crop,q_80,fl_progressive/w_750,f_auto,c_fit/the-residency-towers-chennai/SkyBackground_wpmeqz");
         background-size: cover;
         background-position: center;
-        height: 100vh;
+        height: 60vh;
         color: white;
+      }
+
+      .navbar-custom {
+        background: transparent;
+        border: none;
+        color: white;
+      }
+
+      .navbar-custom .navbar-nav > li > a {
+        color: white;
+      }
+
+      .navbar-custom .navbar-nav > li > a:hover {
+        color: #ddd;
+      }
+
+      .navbar-custom .navbar-toggle {
+        border-color: white;
+      }
+
+      .navbar-custom .icon-bar {
+        background-color: white;
       }
 
       .hero-overlay {
@@ -41,7 +61,7 @@
         position: relative;
         z-index: 2;
         text-align: center;
-        padding-top: 20%;
+        padding-top: 15%;
       }
 
       .hero-content h1 {
@@ -55,32 +75,27 @@
         margin-bottom: 40px;
       }
 
-      .search-bar {
+      .card-container {
         display: flex;
         justify-content: center;
-        align-items: center;
-        margin-top: 20px;
+        margin: 40px 0;
+        gap: 20px;
       }
 
-      .search-bar input[type='text'] {
-        padding: 10px;
+      .card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         width: 300px;
-        border: none;
-        border-radius: 5px 0 0 5px;
-        outline: none;
+        text-align: center;
+        padding: 20px;
       }
 
-      .search-bar button {
-        padding: 10px;
-        background-color: orangered;
-        border: none;
-        color: white;
-        border-radius: 0 5px 5px 0;
-        cursor: pointer;
-      }
-
-      .search-bar button:hover {
-        background-color: darkorange;
+      .card img {
+        width: 100%;
+        border-radius: 8px 8px 0 0;
+        height: 200px;
+        object-fit: cover;
       }
 
       footer {
@@ -110,16 +125,71 @@
   <body>
     <div class="hero-section">
       <div class="hero-overlay"></div>
+
+      <nav class="navbar navbar-custom navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target="#navbar"
+            >
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" style="color: white">SavoryNest</a>
+          </div>
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
       <div class="hero-content">
         <h1>SavoryNest</h1>
         <p>Discover the best food & drinks at SavoryNest</p>
-        <div class="search-bar">
-          <input
-            type="text"
-            placeholder="Search for restaurant, cuisine, or a dish"
-          />
-          <button>Search</button>
+        <br />
+        <div class="btn">
+          <a href="form.html">
+            <button type="button" class="btn btn-primary btn-lg active">
+              Book Meals
+            </button>
+          </a>
         </div>
+      </div>
+    </div>
+    <br />
+    <br />
+
+    <div class="card-container">
+      <div class="card">
+        <img
+          src="https://www.shutterstock.com/image-photo/order-deliver-food-online-eat-260nw-2472179949.jpg"
+          alt="Order Online"
+        />
+        <h3>Order Online</h3>
+        <p>Conveniently order your favorite meals online and enjoy!</p>
+      </div>
+      <div class="card">
+        <img
+          src="https://5.imimg.com/data5/SELLER/Default/2022/3/UE/BD/MV/55149941/cash-delivery-services.jpg"
+          alt="Cash on Delivery"
+        />
+        <h3>Cash on Delivery</h3>
+        <p>Pay for your meals with cash at your doorstep.</p>
+      </div>
+      <div class="card">
+        <img
+          src="https://cdn4.vectorstock.com/i/1000x1000/70/33/emblem-cash-back-vector-19027033.jpg"
+          alt="Cashback on Family Order"
+        />
+        <h3>Cashback on Family Order</h3>
+        <p>Enjoy exclusive cashback offers on family orders.</p>
       </div>
     </div>
 
@@ -162,20 +232,20 @@
           </div>
           <div class="col-md-3">
             <h4>Follow Us</h4>
-            <a href="#" style="margin-right: 10px;">
+            <a href="#" style="margin-right: 10px">
               <i class="glyphicon glyphicon-facebook"></i>
             </a>
-            <a href="#" style="margin-right: 10px;">
+            <a href="#" style="margin-right: 10px">
               <i class="glyphicon glyphicon-twitter"></i>
             </a>
-            <a href="#" style="margin-right: 10px;">
+            <a href="#" style="margin-right: 10px">
               <i class="glyphicon glyphicon-instagram"></i>
             </a>
           </div>
         </div>
         <div class="row">
-          <div class="col-12 text-center" style="margin-top: 20px;">
-            <p style="font-size: 14px; margin: 0; color: #6c757d;">
+          <div class="col-12 text-center" style="margin-top: 20px">
+            <p style="font-size: 14px; margin: 0; color: #6c757d">
               &copy; 2025 SavoryNest. All rights reserved.
             </p>
           </div>
